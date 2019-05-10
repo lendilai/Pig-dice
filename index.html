@@ -5,36 +5,60 @@
   <!-- Pig-Dice ? -->
   <!-- X gon' give it to yah -->
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Pig Dice | Let's get rollin'</title>
   <link rel="stylesheet" href="mdb/css/bootstrap.css">
   <link rel="stylesheet" href="mdb/css/mdb.css">
   <link rel="stylesheet" href="Css/index.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Baloo+Bhai|Bitter|Hind|Lora|Permanent+Marker|Prompt|Yeon+Sung" rel="stylesheet">
 </head>
 
 <body>
   <div class="top">
-    <h1>PIG DICE</h1>
-    <p>Who is the smartest pig in the world ? <i class="fas fa-angle-double-right"></i></p><br>
-    <p><strong>Ein-swine </strong><i class="fas fa-piggy-bank"></i></p>
+    <h1 class="animated bounce infinite">PIG DICE</h1>
+    <p>Who is the smartest pig in the world ? </p><br>
+    <span class="piggy-click"><button type="button" class="btn btn-primary"><i class="fas fa-piggy-bank"></i></button></span><br>
+    <p id="einswine"><strong> Ein-swine &#128513;</strong></p><br>
+    <a href="#rules"><i class="fas fa-angle-double-down" id="arrow-hidden"></i></a><br>
+    <i class="fas fa-angle-double-down" id="arrow-showing"></i>
   </div>
-  <div class="rules">
-    <div class="col-md-12">
-      <h2>The rules</h2>
-      <ul>
-        <li>The player may continue rolling and accumulating points (but risk rolling a 1) or end his turn.</li>
-        <li>If the player rolls a 1 his turn is over, he loses all points he accumulated in that turn, and he passes the die to the next player.</li>
-        <li>Play passes from player to player until a winner is determined.</li>
-      </ul>
-    </div>
+  <div class="rules" id="rules">
+    <h2>Rules</h2>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Rule</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">1</th>
+          <td>The player may continue rolling and accumulating points (but risk rolling a 1) or end his turn.</td>
+        </tr>
+        <tr>
+          <th scope="row">2</th>
+          <td>If the player rolls a 1 his turn is over, he loses all points he accumulated in that turn, and he passes the die to the next player.</td>
+        </tr>
+        <tr>
+          <th scope="row">3</th>
+          <td>Play passes from player to player until a winner is determined.</td>
+        </tr>
+      </tbody>
+    </table>
   </div>
   <div class="play-the-game">
     <div class="col-md-12">
       <h2>Play Pig Dice</h2>
       <p>Click sleepy <strong>Piggie Smalls</strong> to play the game</p>
-      <a href="play.html"><img src="./Images/pig-sleepy-1.gif" alt="Piggie Smalls sleeping" class="img-fluid"></a>
+      <a href="play.html"><img src="./Images/pig-sleepy-1.gif" data-src="./Images/pig-sleepy-1.gif" data-hover="./Images/pig-typing.gif" alt="Piggie Smalls sleeping" class="img-fluid" id="piggie"></a>
     </div>
   </div>
+  <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="scripts.js">
+
+  </script>
 </body>
 
 </html>

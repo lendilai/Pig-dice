@@ -1,0 +1,76 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  text-align: center;
+}
+
+.top {
+  background-image: url("../Images/background.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  background-attachment: fixed;
+  font-family: "Permanent Marker";
+}
+
+.top h1 {
+  padding-top: 15%;
+}
+
+#arrow-showing {
+  font-size: 27px;
+  color: coral;
+}
+
+#arrow-hidden {
+  display: none;
+  font-size: 27px;
+  border: 1px dotted black;
+  padding: 0.5%;
+  border-radius: 50%;
+}
+
+.top .fa-angle-double-right {
+  font-size: 27px;
+}
+
+.top .fa-angle-double-right:hover {
+  color: orange;
+  transition: 0.4s;
+}
+
+.top #einswine {
+  display: none;
+  font-family: "Bitter";
+  padding-bottom: 3%;
+}
+
+/* .top .fa-angle-double-down {
+  border: 1px dotted black;
+  padding: 0.5%;
+  border-radius: 50%;
+  font-size: 27px;
+}
+
+.top .fa-angle-double-down:hover {
+  color: orange;
+  transition: 0.4s;
+} */
+.rules {
+  margin: 0 12%;
+  text-align: left;
+}
+
+h2 {
+  text-align: center;
+  padding-top: 3%;
+  font-family: "Baloo Bhai";
+  text-shadow: 3px 3px 4px grey;
+}
+
+.rules ul {
+  text-align: left;
+}
