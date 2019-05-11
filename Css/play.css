@@ -6,6 +6,10 @@ body {
   width: 80%;
 }
 
+.container-fluid {
+  margin-top: 8%;
+}
+
 .card {
   background-color: lightgrey;
   border: 3px solid #C0C0C0;
@@ -13,4 +17,58 @@ body {
 
 .card .col-lg-3 {
   margin: auto;
+}
+
+#help {
+  font-size: 22px;
+  background-color: lightcoral;
+  color: white;
+  border-radius: 50%;
+}
+
+nav {
+  width: 100%;
+  background-color: white;
+  top: -2%;
+  position: absolute;
+  height: 70px;
+}
+
+nav ul {
+  text-align: center;
+}
+
+nav .help {
+  float: right;
+  padding-right: 16%;
+  padding-top: 4%;
+}
+
+nav #help:hover {
+  background-color: #FFC0CB;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+nav ul li {
+  display: inline-block;
+  color: #3399ff;
+  font-size: 18px;
+}
+
+nav ul li:hover {
+  color: #FFC0CB;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+nav ul li a {
+  text-decoration: none;
+  display: block;
+  padding: 15px;
+}
+
+nav ul li a:hover {
+  color: coral;
+  transition: 0.4s;
 }

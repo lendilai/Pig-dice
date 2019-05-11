@@ -15,9 +15,22 @@
 </head>
 
 <body>
+  <nav>
+    <ul class="justify-content-center">
+      <li class="nav-item">
+        <a href="index.html"><i class="fas fa-home"></i></a>
+      </li>
+      <li>
+        <i class="fas fa-plus-circle"> New game</i>
+      </li>
+      <li class="help">
+        <i class="far fa-question-circle" id="help"></i>
+      </li>
+    </ul>
+  </nav>
   <div class="container-fluid">
     <div class="row">
-      <div class="col-lg-6 card">
+      <div class="col-lg-6 card player1">
         <div class="col-lg-3">
           <h2>Player 1</h2>
           <p>Score : <span>0</span></p>
@@ -46,6 +59,7 @@
     </div>
   </div>
   <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
   <script type="text/javascript" src="scripts.js">
 
   </script>
