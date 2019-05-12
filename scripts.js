@@ -20,6 +20,7 @@ $("#help").click(function() {
   });
 });
 
+
 // Business logic for the gameplay
 var player1, player2;
 
@@ -71,4 +72,21 @@ Play.prototype.hold = function() {
     return false;
   }
   return this.finalScore;
+}
+
+function newGame() {
+  $(".player1").children().prop("disabled", false);
+  $(".player1").removeClass("disabledArea");
+  $(".player2").children().prop("disabled", false);
+  $(".player2").removeClass("disabledArea");
+  var fieldsToReset = [diceRoll, roundScore, finalScore];
+  fieldsToReset.forEach(function(play) {
+    play.diceRoll = 0;
+    play.roundScore = 0;
+    play.finalScore = 0;
+  });
+  var currents = [$(".diceRoll1"), $(".roundScore1"), $(".finalScore1"), $(".diceRoll2"), $(".roundScore2"), $(".finalScore2")];
+  currents.forEach(function(current) {
+    current.text(0);
+  });
 }
