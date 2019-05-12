@@ -47,9 +47,10 @@ $("#roll1").click(function() {
 });
 $("#hold1").click(function() {
   finalScore1 += roundScore1;
-  if (finalScore1 >= 10) {
+  if (finalScore1 >= 100) {
     $(".winner1").html("You win &#127881");
     $("#image1").attr("src", "./Images/pig-standing.gif");
+    $(".comment1").text("Congrats on your jolly win! Click new game to play again.").removeClass("red-background").removeClass("green-background");
   } else {
     $(".buttons1").hide(100);
     $(".buttons2").show(100);
@@ -90,6 +91,7 @@ $("#hold2").click(function() {
   if (finalScore2 >= 100) {
     $(".winner2").html("You win &#127881");
     $("#image2").attr("src", "./Images/pig-standing.gif");
+    $(".comment1").text("Congrats on your jolly win! Click new game to play again.").removeClass("red-background").removeClass("green-background");
   } else {
     $(".buttons2").hide(100);
     $(".buttons1").show(100);
