@@ -1,3 +1,4 @@
+// User-interface logic landing page and part of gameplay page
 $("button").click(function() {
   $("#einswine").slideToggle("10000");
 });
@@ -18,3 +19,27 @@ $("#help").click(function() {
     button: "Got it !",
   });
 });
+
+// Business logic for the gameplay
+var player1, player2;
+
+function Play(diceRoll, roundScore, finalScore, active) {
+
+  this.roundScore = 0;
+  this.finalScore = 0;
+  this.active = active;
+}
+
+function playing() {
+  if (player1.active === true && player2.active === false) {
+    $(".player1").children().prop("disabled", false);
+    $(".player1").removeClass("disabledArea");
+    $(".player2").children().prop("disabled", true);
+    $(".player2").addClass("disabledArea");
+  } else {
+    $(".player1").children().prop("disabled", true);
+    $(".player1").addClass("disabledArea");
+    $(".player2").children().prop("disabled", false);
+    $(".player2").removeClass("disabledArea");
+  }
+}
