@@ -28,27 +28,14 @@ roundScore2 = 0;
 finalScore1 = 0;
 finalScore2 = 0;
 
-function newGame() {
-  $(".player1").children().prop("disabled", false);
-  $(".player1").removeClass("disabledArea");
-  $(".player2").children().prop("disabled", false);
-  $(".player2").removeClass("disabledArea");
-  var fieldsToReset = [diceRoll, roundScore, finalScore];
-  fieldsToReset.forEach(function(play) {
-    play.diceRoll = 0;
-    play.roundScore = 0;
-    play.finalScore = 0;
-  });
-};
-
 $("#roll1").click(function() {
   var randomNo = Math.floor((Math.random() * 6) + 1);
   if (randomNo === 1) {
     roundScore1 = 0;
     $(".diceroll1").text(randomNo);
     $(".roundScore1").text(roundScore1);
-    $(".comment1").text("Oops ! You rolled a one.").addClass("red-background");
-    $(".buttons1").hide(1000);
+    $(".comment1").text("Oops ! You rolled a one.").addClass("red-background").removeClass("green-background");
+    $(".buttons1").hide(100);
     $(".buttons2").show(100);
     finalScore1 += roundScore1;
     $(".finalScore1").text(finalScore1);
@@ -60,8 +47,35 @@ $("#roll1").click(function() {
 });
 $("#hold1").click(function() {
   finalScore1 += roundScore1;
-  $(".buttons1").hide(1000);
+  $(".buttons1").hide(100);
   $(".buttons2").show(100);
   $(".finalScore1").text(finalScore1);
-  $(".comment1").text("Nice play !").addClass("green-background");
+  $(".comment1").text("Nice play !").addClass("green-background").removeClass("red-background");
+  roundScore1 = 0;
+});
+
+$("#roll2").click(function() {
+  var randomNo = Math.floor((Math.random() * 6) + 1);
+  if (randomNo === 1) {
+    roundScore2 = 0;
+    $(".diceroll2").text(randomNo);
+    $(".roundScore2").text(roundScore2);
+    $(".comment2").text("Oops ! You rolled a one.").addClass("red-background").removeClass("green-background");
+    $(".buttons2").hide(100);
+    $(".buttons1").show(100);
+    finalScore2 += roundScore2;
+    $(".finalScore2").text(finalScore2);
+  } else {
+    $(".diceRoll2").text(randomNo);
+    roundScore2 += randomNo;
+    $(".roundScore2").text(roundScore2);
+  }
+});
+$("#hold2").click(function() {
+  finalScore2 += roundScore2;
+  $(".buttons2").hide(100);
+  $(".buttons1").show(100);
+  $(".finalScore2").text(finalScore2);
+  $(".comment2").text("Nice play !").addClass("green-background").removeClass("red-background");
+  roundScore2 = 0;
 });
