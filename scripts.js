@@ -46,15 +46,13 @@ function playing() {
 Play.prototype.diceRoll = function() {
   var diceNumber = (Math.floor(Math.random() * 6) + 1);
   this.diceRoll = diceNumber;
+  playing();
   if (diceRoll === 1) {
     this.roundScore = 0;
     if (this.active === player1.active) {
       player1.active = false;
       player2.active = true;
     } else {
-      = function() {
-        return (Math.floor(Math.random() * 6) + 1);
-      }
       player1.active = true;
       player2.active = false;
     }
@@ -62,4 +60,15 @@ Play.prototype.diceRoll = function() {
   } else {
     return this.roundScore += diceNumber;
   }
+}
+Play.prototype.hold = function() {
+  playing();
+  this.finalScore += roundScore;
+  if (this.finalScore >= 100) {
+    $(".winner").text("Congrats ! You win !");
+    // $("img").attr("src", "./Images/pig-standing.gif");
+  } else {
+    return false;
+  }
+  return this.finalScore;
 }
