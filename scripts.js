@@ -43,3 +43,23 @@ function playing() {
     $(".player2").removeClass("disabledArea");
   }
 }
+Play.prototype.diceRoll = function() {
+  var diceNumber = (Math.floor(Math.random() * 6) + 1);
+  this.diceRoll = diceNumber;
+  if (diceRoll === 1) {
+    this.roundScore = 0;
+    if (this.active === player1.active) {
+      player1.active = false;
+      player2.active = true;
+    } else {
+      = function() {
+        return (Math.floor(Math.random() * 6) + 1);
+      }
+      player1.active = true;
+      player2.active = false;
+    }
+    $(".comment").this().text("Sorry, you rolled a one.");
+  } else {
+    return this.roundScore += diceNumber;
+  }
+}
