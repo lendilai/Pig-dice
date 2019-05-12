@@ -34,7 +34,7 @@ $("#roll1").click(function() {
     roundScore1 = 0;
     $(".diceroll1").text(randomNo);
     $(".roundScore1").text(roundScore1);
-    $(".comment1").text("Oops ! You rolled a one.").addClass("red-background").removeClass("green-background");
+    $(".comment1").html("Oops ! You rolled a one. &#128542").addClass("red-background").removeClass("green-background");
     $(".buttons1").hide(100);
     $(".buttons2").show(100);
     finalScore1 += roundScore1;
@@ -47,12 +47,25 @@ $("#roll1").click(function() {
 });
 $("#hold1").click(function() {
   finalScore1 += roundScore1;
-  $(".buttons1").hide(100);
-  $(".buttons2").show(100);
-  $(".finalScore1").text(finalScore1);
-  $(".comment1").text("Nice play !").addClass("green-background").removeClass("red-background");
+  if (finalScore1 >= 100) {
+    $(".winner1").html("You win &#127881");
+  } else {
+    $(".buttons1").hide(100);
+    $(".buttons2").show(100);
+    $(".finalScore1").text(finalScore1);
+    if (roundScore1 <= 10) {
+      $(".comment1").text("Not bad at all").addClass("green-background").removeClass("red-background");
+    } else if (roundScore1 <= 20) {
+      $(".comment1").text("You're doing good").addClass("green-background").removeClass("red-background");
+    } else if (roundScore1 <= 40) {
+      $(".comment1").html("Amazing guts ! &#128170").addClass("green-background").removeClass("red-background");
+    } else {
+      $(".comment1").html("Only legends can go this far! Big up! &#128074 &#9996").addClass("green-background").removeClass("red-background");
+    }
+  }
   roundScore1 = 0;
 });
+
 
 $("#roll2").click(function() {
   var randomNo = Math.floor((Math.random() * 6) + 1);
@@ -60,7 +73,7 @@ $("#roll2").click(function() {
     roundScore2 = 0;
     $(".diceroll2").text(randomNo);
     $(".roundScore2").text(roundScore2);
-    $(".comment2").text("Oops ! You rolled a one.").addClass("red-background").removeClass("green-background");
+    $(".comment2").html("Oops ! You rolled a one. &#128542").addClass("red-background").removeClass("green-background");
     $(".buttons2").hide(100);
     $(".buttons1").show(100);
     finalScore2 += roundScore2;
@@ -73,9 +86,21 @@ $("#roll2").click(function() {
 });
 $("#hold2").click(function() {
   finalScore2 += roundScore2;
-  $(".buttons2").hide(100);
-  $(".buttons1").show(100);
-  $(".finalScore2").text(finalScore2);
-  $(".comment2").text("Nice play !").addClass("green-background").removeClass("red-background");
+  if (finalScore2 >= 100) {
+    $(".winner2").html("You win &#127881");
+  } else {
+    $(".buttons2").hide(100);
+    $(".buttons1").show(100);
+    $(".finalScore2").text(finalScore2);
+    if (roundScore2 <= 10) {
+      $(".comment2").text("Not bad at all").addClass("green-background").removeClass("red-background");
+    } else if (roundScore2 <= 20) {
+      $(".comment2").text("You're doing good").addClass("green-background").removeClass("red-background");
+    } else if (roundScore2 <= 40) {
+      $(".comment2").html("Amazing guts ! &#128170").addClass("green-background").removeClass("red-background");
+    } else {
+      $(".comment2").html("Only legends can go this far! Big up! &#128074 &#9996").addClass("green-background").removeClass("red-background");
+    }
+  }
   roundScore2 = 0;
 });
