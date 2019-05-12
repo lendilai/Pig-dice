@@ -21,14 +21,12 @@ $("#help").click(function() {
 });
 
 // Business logic for the gameplay
-var player1, player2;
+var diceRoll, roundScore1, roundScore2, finalScore1, finalScore2;
 
-function Play(diceRoll, roundScore, finalScore, active) {
-
-  this.roundScore = 0;
-  this.finalScore = 0;
-  this.active = active;
-};
+roundScore1 = 0;
+roundScore2 = 0;
+finalScore1 = 0;
+finalScore2 = 0;
 
 function newGame() {
   $(".player1").children().prop("disabled", false);
@@ -41,3 +39,29 @@ function newGame() {
     play.roundScore = 0;
     play.finalScore = 0;
   });
+};
+
+$("#roll1").click(function() {
+  var randomNo = Math.floor((Math.random() * 6) + 1);
+  if (randomNo === 1) {
+    roundScore1 = 0;
+    $(".diceroll1").text(randomNo);
+    $(".roundScore1").text(roundScore1);
+    $(".comment1").text("Oops ! You rolled a one.").addClass("red-background");
+    $(".buttons1").hide(1000);
+    $(".buttons2").show(100);
+    finalScore1 += roundScore1;
+    $(".finalScore1").text(finalScore1);
+  } else {
+    $(".diceRoll1").text(randomNo);
+    roundScore1 += randomNo;
+    $(".roundScore1").text(roundScore1);
+  }
+});
+$("#hold1").click(function() {
+  finalScore1 += roundScore1;
+  $(".buttons1").hide(1000);
+  $(".buttons2").show(100);
+  $(".finalScore1").text(finalScore1);
+  $(".comment1").text("Nice play !").addClass("green-background");
+});
