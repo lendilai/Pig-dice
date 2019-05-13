@@ -102,7 +102,7 @@ $("#hold2").click(function() {
       $(".comment2").text("Not bad at all").addClass("green-background").removeClass("red-background");
     } else if (roundScore2 <= 20) {
       $(".comment2").text("You're doing good").addClass("green-background").removeClass("red-background");
-    } else if (roundScore2 <= 40) {
+    } else if (roundScore2 <= 30) {
       $(".comment2").html("Amazing guts ! &#128170").addClass("green-background").removeClass("red-background");
     } else if (roundScore1 <= 40) {
       $(".comment2").html("Aced it like a champ ! &#128076").addClass("green-background").removeClass("red-background");
