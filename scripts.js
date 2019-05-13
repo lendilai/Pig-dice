@@ -59,8 +59,10 @@ $("#hold1").click(function() {
       $(".comment1").text("Not bad at all").addClass("green-background").removeClass("red-background");
     } else if (roundScore1 <= 20) {
       $(".comment1").text("You're doing good").addClass("green-background").removeClass("red-background");
-    } else if (roundScore1 <= 40) {
+    } else if (roundScore1 <= 30) {
       $(".comment1").html("Amazing guts ! &#128170").addClass("green-background").removeClass("red-background");
+    } else if (roundScore1 <= 40) {
+      $(".comment1").html("Aced it like a champ ! &#128076").addClass("green-background").removeClass("red-background");
     } else {
       $(".comment1").html("Only legends can go this far! Big up! &#128074 &#9996").addClass("green-background").removeClass("red-background");
     }
@@ -91,7 +93,7 @@ $("#hold2").click(function() {
   if (finalScore2 >= 100) {
     $(".winner2").html("You win &#127881");
     $("#image2").attr("src", "./Images/pig-standing.gif");
-    $(".comment1").text("Congrats on your jolly win! Click new game to play again.").removeClass("red-background").removeClass("green-background");
+    $(".comment2").text("Congrats on your jolly win! Click new game to play again.").removeClass("red-background").removeClass("green-background");
   } else {
     $(".buttons2").hide(100);
     $(".buttons1").show(100);
@@ -102,6 +104,8 @@ $("#hold2").click(function() {
       $(".comment2").text("You're doing good").addClass("green-background").removeClass("red-background");
     } else if (roundScore2 <= 40) {
       $(".comment2").html("Amazing guts ! &#128170").addClass("green-background").removeClass("red-background");
+    } else if (roundScore1 <= 40) {
+      $(".comment2").html("Aced it like a champ ! &#128076").addClass("green-background").removeClass("red-background");
     } else {
       $(".comment2").html("Only legends can go this far! Big up! &#128074 &#9996").addClass("green-background").removeClass("red-background");
     }
