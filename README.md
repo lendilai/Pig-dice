@@ -1,6 +1,6 @@
 # Pig-Dice Game
-![]()
-#### a fun dice-rolling game.
+![](./Images/landing.png)
+#### A fun dice-rolling game.
 
 #### By **Nathan Ng'ethe**
 
@@ -14,6 +14,8 @@ Pig-dice is a deeply engrossing game whereby the player rolls a dice and continu
 
 * New Game - use this icon to reset the game if you wish to start all over again.
 
+## Demo
+![](./Images/demo.gif)
 ## Setup instructions
 The game is only available for online access but in the future I plan to have it available for offline access.
 
