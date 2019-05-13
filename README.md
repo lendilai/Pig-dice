@@ -20,9 +20,9 @@ Pig-dice is a deeply engrossing game whereby the player rolls a dice and continu
 The game is only available for online access but in the future I plan to have it available for offline access.
 
 ## Technologies used
-- [HTML & CSS]() - I used html to make the backbone of the game and CSS to style various elements inthe HTML document.
-- [Bootstrap]() - This acts as a framework especiallly when it comes to positioning elements in the game.
-- [Javascript]() - Javascript is the main component when it comes to the game's functionality. I also used [jQuery]() as a library.
+- [HTML & CSS](https://www.w3schools.com/html/html_css.asp) - I used html to make the backbone of the game and CSS to style various elements inthe HTML document.
+- [Bootstrap](https://getbootstrap.com/) - This acts as a framework especiallly when it comes to positioning elements in the game.
+- [Javascript](https://www.w3schools.com/js/) - Javascript is the main component when it comes to the game's functionality. I also used [jQuery](https://jquery.com/) as a library.
 
 ## Behaviour Driven Development (BDD)
 | Project should handle : | Input example :     | Output example : |
