@@ -40,4 +40,4 @@ So far, there are no known bugs in the game. However, if you find any you are fr
 To contact me, you can reach out to me via gmail at ngethenan768@gmail.com or call me on +254 706446072.
 
 ## License
-The work is under an [MIT License](). (c) [Nathan Ng'ethe](https://github.com/lendilai)
+The work is under an [MIT License](https://github.com/lendilai/Pig-dice/blob/master/LICENSE). (c) [Nathan Ng'ethe](https://github.com/lendilai)
